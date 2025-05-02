@@ -2,8 +2,11 @@
 
 ---
 
-<header>
-    <h1>ChronoSpire GAMES</h1>
+<header class="head">
+    <div class="logo-name">
+      <img src="#" alt="logo">
+      <h1>ChronoSpire GAMES</h1>
+    </div>
     <nav>
       <ul>
         <li><a href="/">Inicio</a></li>
@@ -16,5 +19,35 @@
   </header>
 
 <style>
+
+  .head{
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .logo-name{
+    display: flex; 
+    align-items: center; 
+    gap: 20px;
+  }
+
+  nav{
+    display: flex;
+    align-items: center;
+  }
+
+  ul{
+    display: flex;
+    list-style: none;
+  }
+
+  li{
+    margin: 0px 12px 0px 12px;
+  }
+
+  li a{
+    color: aliceblue;
+    text-decoration: none;
+  }
 	
 </style>
