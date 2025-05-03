@@ -1,11 +1,11 @@
 ---
-
+import Logo from "../assets/logo/logo-ejemplo.jpg"
 ---
 
 <header class="head">
     <div class="logo-name">
-      <img src="#" alt="logo">
-      <h1>ChronoSpire GAMES</h1>
+      <img src={Logo.src} alt="logo">
+      <h1><span id="title">ChronoSpire</span><br> GAMES</h1>
     </div>
     <nav>
       <ul>
@@ -13,7 +13,7 @@
         <li><a href="#Juegos">Juegos</a></li>
         <li><a href="/galeria">Galería</a></li>
         <li><a href="#Descargar">Descargar</a></li>
-        <li><a href="#">Iniciar Sesion</a></li>
+        <li id="log-li"><a href="#" id="log-a">Iniciar Sesion</a></li>
       </ul>
     </nav>
   </header>
@@ -23,12 +23,23 @@
   .head{
     display: flex;
     justify-content: space-around;
+    padding: 30px 10px;
+    background-color: rgb(40, 40, 40);
   }
 
   .logo-name{
     display: flex; 
     align-items: center; 
     gap: 20px;
+  }
+
+  #title{
+      color: var(--dorado);
+  }
+
+  h1{
+    color: var(--blanco);
+    cursor: pointer;
   }
 
   nav{
@@ -42,12 +53,37 @@
   }
 
   li{
-    margin: 0px 12px 0px 12px;
+    margin: 0px 5px 0px 5px;
   }
 
   li a{
-    color: aliceblue;
+    color: var(--blanco);
     text-decoration: none;
+    font-weight: 700;
+    padding: 10px;
+    transition: 0.3s;
+  }
+
+  li a:hover{
+    text-decoration: underline var(--dorado) 2px;
+
+  }
+
+  #log-a{
+    border: 2px solid var(--blanco);
+    border-radius: 10px;
+  }
+
+  #log-a:hover{
+    background-color: var(--dorado);
+    border:2px solid var(--dorado);
+    text-decoration: none;
+  }
+
+  img{
+    width: 80px;
+    border-radius: 50px;
+    cursor: pointer;
   }
 	
 </style>
